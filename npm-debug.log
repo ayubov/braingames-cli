@@ -1,0 +1,96 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/alvi/.nvm/versions/node/v6.11.3/bin/node',
+1 verbose cli   '/home/alvi/.nvm/versions/node/v6.11.3/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.3
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/alvi/braingames',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/alvi/.npm/braingames/0.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/alvi/.npm correctMkdir not in flight; initializing
+10 info lifecycle braingames@0.0.0~prepublish: braingames@0.0.0
+11 verbose lifecycle braingames@0.0.0~prepublish: unsafe-perm in lifecycle true
+12 verbose lifecycle braingames@0.0.0~prepublish: PATH: /home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/bin/node-gyp-bin:/home/alvi/braingames/node_modules/.bin:/home/alvi/.nvm/versions/node/v6.11.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+13 verbose lifecycle braingames@0.0.0~prepublish: CWD: /home/alvi/braingames
+14 silly lifecycle braingames@0.0.0~prepublish: Args: [ '-c', 'npm run build' ]
+15 silly lifecycle braingames@0.0.0~prepublish: Returned: code: 0  signal: null
+16 verbose tar pack [ '/home/alvi/.npm/braingames/0.0.0/package.tgz',
+16 verbose tar pack   '/home/alvi/braingames' ]
+17 verbose tarball /home/alvi/.npm/braingames/0.0.0/package.tgz
+18 verbose folder /home/alvi/braingames
+19 verbose addLocalTarball adding from inside cache /home/alvi/.npm/braingames/0.0.0/package.tgz
+20 verbose correctMkdir /home/alvi/.npm correctMkdir not in flight; initializing
+21 silly cache afterAdd braingames@0.0.0
+22 verbose afterAdd /home/alvi/.npm/braingames/0.0.0/package/package.json not in flight; writing
+23 verbose correctMkdir /home/alvi/.npm correctMkdir not in flight; initializing
+24 verbose afterAdd /home/alvi/.npm/braingames/0.0.0/package/package.json written
+25 silly publish { name: 'braingames',
+25 silly publish   version: '0.0.0',
+25 silly publish   description: '',
+25 silly publish   main: 'index.js',
+25 silly publish   scripts:
+25 silly publish    { test: 'echo "Error: no test specified" && exit 1',
+25 silly publish      'babel-node': 'babel-node',
+25 silly publish      build: 'NODE_ENV=production babel src --out-dir dist --source-maps inline',
+25 silly publish      prepublish: 'npm run build' },
+25 silly publish   repository:
+25 silly publish    { type: 'git',
+25 silly publish      url: 'git+https://github.com/ayubov/project-lvl1-s128.git' },
+25 silly publish   author: { name: 'Alvi Ayubov' },
+25 silly publish   license: 'BSD-2-Clause',
+25 silly publish   bugs: { url: 'https://github.com/ayubov/project-lvl1-s128/issues' },
+25 silly publish   devDependencies:
+25 silly publish    { 'babel-cli': '*',
+25 silly publish      'babel-core': '*',
+25 silly publish      'babel-preset-env': '*',
+25 silly publish      'babel-preset-stage-0': '*' },
+25 silly publish   bin: { 'brain-games': 'dist/bin/brain-games.js' },
+25 silly publish   readme: 'ERROR: No README data found!',
+25 silly publish   homepage: 'https://github.com/ayubov/project-lvl1-s128#readme',
+25 silly publish   _id: 'braingames@0.0.0',
+25 silly publish   _shasum: '18529fc65d8aa842b6811828dd622fce570c290e',
+25 silly publish   _from: '.' }
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name braingames
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'braingames',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'braingames',
+30 silly mapToRegistry   name: 'braingames',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/braingames
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /home/alvi/.npm/braingames/0.0.0/package.tgz
+34 verbose stack Error: auth required for publishing
+34 verbose stack     at CachingRegistryClient.publish (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+34 verbose stack     at /home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/lib/publish.js:138:14
+34 verbose stack     at mapToRegistry (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+34 verbose stack     at publish_ (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/lib/publish.js:107:3)
+34 verbose stack     at Array.<anonymous> (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+34 verbose stack     at LOOP (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+34 verbose stack     at LOOP (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+34 verbose stack     at chain (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+34 verbose stack     at /home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/lib/publish.js:73:5
+34 verbose stack     at RES (/home/alvi/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+35 verbose cwd /home/alvi/braingames
+36 error Linux 3.18.0-14875-g438cb8ab27c6
+37 error argv "/home/alvi/.nvm/versions/node/v6.11.3/bin/node" "/home/alvi/.nvm/versions/node/v6.11.3/bin/npm" "publish"
+38 error node v6.11.3
+39 error npm  v3.10.10
+40 error code ENEEDAUTH
+41 error need auth auth required for publishing
+42 error need auth You need to authorize this machine using `npm adduser`
+43 verbose exit [ 1, true ]

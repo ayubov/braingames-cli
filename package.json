@@ -1,0 +1,30 @@
+{
+  "name": "braingames",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayubov/project-lvl1-s128"
+  },
+  "author": "Alvi Ayubov",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ayubov/project-lvl1-s128/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  },
+  "bin": {
+  "brain-games": "dist/bin/brain-games.js"
+  }
+}
