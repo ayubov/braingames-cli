@@ -1,7 +1,7 @@
 {
   "name": "braingames-cli",
-  "version": "0.0.2",
-  "description": "Uncomplicated CLI game",
+  "version": "0.0.3",
+  "description": "Uncomplicated CLI games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,7 +26,6 @@
     "babel-preset-stage-0": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-flowtype": "*",
     "eslint-plugin-import": "*"
   },
   "bin": {
