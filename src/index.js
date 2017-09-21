@@ -12,19 +12,6 @@ export const sayHello = () => {
   console.log(`Hello, ${salutation()}!`);
 };
 
-const checkAnswer = (correctAnswer, userAnswer, name, counter) => {
-  if (correctAnswer !== userAnswer) {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-    console.log('Let\'s try again, Bill!');
-    return 'the end';
-  } else if (counter === 2) {
-    console.log('Correct!');
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log('Correct!');
-  }
-};
-
 export const isEvenGame = () => {
   const isNumberEven = num => (num % 2 === 0 ? 'yes' : 'no');
   const name = salutation('Answer "yes" if number even otherwise answer "no"');
@@ -33,9 +20,18 @@ export const isEvenGame = () => {
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = isNumberEven(number);
-    if (checkAnswer(correctAnswer, userAnswer, name, i) === 'the end') {
+    if (correctAnswer !== userAnswer) {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log('Let\'s try again, Bill!');
       return;
+    } else if (i === 2) {
+      console.log('Correct!');
+      console.log(`Congratulations, ${name}!`);
+    } else {
+      console.log('Correct!');
     }
   }
+
+// export const calc = () => {}
 };
 
