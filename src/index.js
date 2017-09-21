@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
 export const sayHello = () => {
-  console.log('Welcome to the Brain Games!'); 
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   return console.log(`Hello, ${name}!`);
-}
+};
 
 export const isEvenGame = () => {
   const isNumberEven = num => (num % 2 === 0 ? 'yes' : 'no');
