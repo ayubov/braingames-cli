@@ -26,7 +26,8 @@
     "babel-preset-stage-0": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "eslint-plugin-import": "*",
+    "readline-sync": "*"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
