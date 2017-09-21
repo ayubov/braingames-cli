@@ -19,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/ayubov/project-lvl1-s128/issues"
   },
+  "dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
@@ -26,8 +29,7 @@
     "babel-preset-stage-0": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*",
-    "readline-sync": "*"
+    "eslint-plugin-import": "*"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
