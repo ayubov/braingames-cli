@@ -1,16 +1,20 @@
 import readlineSync from 'readline-sync';
 
-export const sayHello = () => {
+const salutation = (task) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  return console.log(`Hello, ${name}!`);
+  if (typeof task !== 'undefined') {
+    console.log(`${task}`);
+  }
+  return readlineSync.question('May I have your name? ');
+};
+
+export const sayHello = () => {
+  console.log(`Hello, ${salutation()}!`);
 };
 
 export const isEvenGame = () => {
   const isNumberEven = num => (num % 2 === 0 ? 'yes' : 'no');
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no"');
-  const name = readlineSync.question('May I have your name? ');
+  const name = salutation('Answer "yes" if number even otherwise answer "no"');
   for (let i = 0; i < 3; i += 1) {
     const number = Math.round(Math.random() * 100);
     console.log(`Question: ${number}`);
