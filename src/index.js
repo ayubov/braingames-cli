@@ -1,37 +1,55 @@
 import readlineSync from 'readline-sync';
 
-const salutation = (task) => {
-  console.log('Welcome to the Brain Games!');
-  if (typeof task !== 'undefined') {
-    console.log(`${task}`);
-  }
-  return readlineSync.question('May I have your name? ');
-};
-
 export const sayHello = () => {
-  console.log(`Hello, ${salutation()}!`);
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
 };
 
 export const isEvenGame = () => {
   const isNumberEven = num => (num % 2 === 0 ? 'yes' : 'no');
-  const name = salutation('Answer "yes" if number even otherwise answer "no"');
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log('Answer "yes" if number even otherwise answer "no"');
   for (let i = 0; i < 3; i += 1) {
-    const number = Math.round(Math.random() * 100);
-    console.log(`Question: ${number}`);
+    const question = Math.round(Math.random() * 100);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = isNumberEven(number);
+    const correctAnswer = isNumberEven(question);
     if (correctAnswer !== userAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-      console.log('Let\'s try again, Bill!');
+      console.log(`Let's try again, ${name}!`);
       return;
-    } else if (i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else {
-      console.log('Correct!');
     }
+    console.log('Correct!');
   }
+  console.log(`Congratulations, ${name}!`);
+};
 
-// export const calc = () => {}
+export const calcGame = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log('What is the result of the expression?');
+  const operations = {
+    '*': (a, b) => a * b,
+    '+': (a, b) => a + b,
+    '-': (a, b) => a - b,
+  };
+  for (let i = 0; i < 3; i += 1) {
+    const firstNumber = Math.round(Math.random() * 100);
+    const secondNumber = Math.round(Math.random() * 100);
+    const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
+    console.log(`Question: ${firstNumber} ${actualOperation} ${secondNumber}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const correctAnswer = operations[actualOperation](firstNumber, secondNumber);
+    // console.log(correctAnswer, userAnswer);
+    if (correctAnswer !== Number(userAnswer)) {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${name}!`);
 };
 
