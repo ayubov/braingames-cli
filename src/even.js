@@ -4,6 +4,7 @@ export default () => {
   const isNumberEven = num => (num % 2 === 0 ? 'yes' : 'no');
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if number even otherwise answer "no"');
   for (let i = 0; i < 3; i += 1) {
     const question = Math.round(Math.random() * 100);
