@@ -18,15 +18,21 @@ export default () => {
     };
     return num1 >= num2 ? findGCD(num1, num2, num2) : findGCD(num1, num2, num1);
   };
-
-  const getRandomNumber = () => Math.round(Math.random() * 100);
-  const [number1, number2] = [getRandomNumber(), getRandomNumber()];
-  const question = `${number1} ${number2}`;
-  const correctAnswer = gcd(number1, number2);
-  const gameData = {
-    question,
-    correctAnswer,
-    name,
-  };
+  const randomNumbers = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
+  class Details {
+    constructor(userName, numbers) {
+      this.name = userName;
+      this.numbers = numbers;
+    }
+    question() {
+      return `${this.numbers[0]} ${this.numbers[1]}`;
+    }
+    correctAnswer() {
+      const actualNumbers = this.numbers;
+      this.numbers = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
+      return gcd(actualNumbers[0], actualNumbers[1]);
+    }
+  }
+  const gameData = new Details(name, randomNumbers);
   return playGame(gameData);
 };
