@@ -20,10 +20,9 @@ export default () => {
   };
 
   const getRandomNumber = () => Math.round(Math.random() * 100);
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber();
+  const [number1, number2] = [getRandomNumber(), getRandomNumber()];
   const question = `${number1} ${number2}`;
-  const correctAnswer = String(gcd(number1, number2));
+  const correctAnswer = gcd(number1, number2);
   const gameData = {
     question,
     correctAnswer,
