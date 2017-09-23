@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { getAnswer } from './index';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -14,8 +15,7 @@ export default () => {
     const firstNumber = Math.round(Math.random() * 100);
     const secondNumber = Math.round(Math.random() * 100);
     const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
-    console.log(`Question: ${firstNumber} ${actualOperation} ${secondNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = getAnswer(`${firstNumber} ${actualOperation} ${secondNumber}`);
     const correctAnswer = operations[actualOperation](firstNumber, secondNumber);
     if (correctAnswer !== Number(userAnswer)) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
