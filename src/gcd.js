@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getAnswer } from './index';
+import playGame from './index';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -18,17 +18,14 @@ export default () => {
     };
     return num1 >= num2 ? findGCD(num1, num2, num2) : findGCD(num1, num2, num1);
   };
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = Math.round(Math.random() * 100);
-    const secondNumber = Math.round(Math.random() * 100);
-    const userAnswer = getAnswer(`${firstNumber} ${secondNumber}`);
-    const correctAnswer = gcd(firstNumber, secondNumber);
-    if (correctAnswer !== Number(userAnswer)) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-    console.log('Correct!');
-  }
-  console.log(`Congratulations, ${name}!`);
+  const getRandomNumber = () => Math.round(Math.random() * 100);
+  const numbers = [getRandomNumber(), getRandomNumber()];
+  const question = `${numbers[0]} ${numbers[1]}`;
+  const correctAnswer = gcd(numbers[0], numbers[1]);
+  const gameData = {
+    question,
+    correctAnswer,
+    name,
+  };
+  return playGame(gameData);
 };
