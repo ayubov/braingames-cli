@@ -4,7 +4,7 @@ export default (gameDetails) => {
   for (let i = 0; i < 3; i += 1) {
     console.log(`Question: ${gameDetails.question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (gameDetails.correctAnswer !== Number(userAnswer)) {
+    if (String(gameDetails.correctAnswer) !== userAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${gameDetails.correctAnswer}.`);
       console.log(`Let's try again, ${gameDetails.name}!`);
       return;

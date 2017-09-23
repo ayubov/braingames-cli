@@ -18,10 +18,12 @@ export default () => {
     };
     return num1 >= num2 ? findGCD(num1, num2, num2) : findGCD(num1, num2, num1);
   };
+
   const getRandomNumber = () => Math.round(Math.random() * 100);
-  const numbers = [getRandomNumber(), getRandomNumber()];
-  const question = `${numbers[0]} ${numbers[1]}`;
-  const correctAnswer = gcd(numbers[0], numbers[1]);
+  const number1 = getRandomNumber();
+  const number2 = getRandomNumber();
+  const question = `${number1} ${number2}`;
+  const correctAnswer = String(gcd(number1, number2));
   const gameData = {
     question,
     correctAnswer,

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getAnswer } from './index';
+import playGame from './index';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -11,18 +11,16 @@ export default () => {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
   };
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = Math.round(Math.random() * 100);
-    const secondNumber = Math.round(Math.random() * 100);
-    const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
-    const userAnswer = getAnswer(`${firstNumber} ${actualOperation} ${secondNumber}`);
-    const correctAnswer = operations[actualOperation](firstNumber, secondNumber);
-    if (correctAnswer !== Number(userAnswer)) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-    console.log('Correct!');
-  }
-  console.log(`Congratulations, ${name}!`);
+  const number1 = Math.round(Math.random() * 100);
+  const number2 = Math.round(Math.random() * 100);
+  const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
+  const correctAnswer = String(operations[actualOperation](number1, number2));
+  const question = `${number1} ${actualOperation} ${number2}`;
+  const gameData = {
+    question,
+    correctAnswer,
+    name,
+  };
+  return playGame(gameData);
 };
+
