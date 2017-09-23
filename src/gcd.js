@@ -19,6 +19,7 @@ export default () => {
     return num1 >= num2 ? findGCD(num1, num2, num2) : findGCD(num1, num2, num1);
   };
   const randomNumbers = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
+
   class Details {
     constructor(userName, numbers) {
       this.name = userName;
@@ -33,6 +34,7 @@ export default () => {
       return gcd(actualNumbers[0], actualNumbers[1]);
     }
   }
+
   const gameData = new Details(name, randomNumbers);
   return playGame(gameData);
 };
