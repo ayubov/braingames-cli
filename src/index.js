@@ -8,7 +8,7 @@ export default (gameDetails) => {
   console.log(`Hello, ${name}!`);
 
   for (let roundCounter = 0; roundCounter < 3; roundCounter += 1) {
-    const { correctAnswer, question } = gameDetails();    
+    const { correctAnswer, question } = gameDetails();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer !== userAnswer) {
