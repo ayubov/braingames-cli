@@ -6,7 +6,7 @@ export default (gameDetails) => {
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = String(gameDetails.correctAnswer());
     if (correctAnswer !== userAnswer) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}.'`);
       console.log(`Let's try again, ${gameDetails.name}!`);
       return;
     }
