@@ -1,6 +1,6 @@
 {
   "name": "braingames-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Uncomplicated CLI games",
   "main": "index.js",
   "scripts": {
