@@ -12,7 +12,7 @@ export default () => {
     const [num1, num2] = [getRandomNumber(100), getRandomNumber(100)];
     const actualOperation = ['*', '+', '-'][getRandomNumber(2)];
     const question = `${num1} ${actualOperation} ${num2}`;
-    const correctAnswer = operations[actualOperation](num1, num2);
+    const correctAnswer = String(operations[actualOperation](num1, num2));
     return { question, correctAnswer, task };
   };
   return playGame(gameData);

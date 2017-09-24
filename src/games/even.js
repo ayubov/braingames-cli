@@ -7,7 +7,7 @@ export default () => {
   const gameData = () => {
     const num = getRandomNumber(100);
     const question = `${num}`;
-    const correctAnswer = isNumberEven(num);
+    const correctAnswer = String(isNumberEven(num));
     return { question, correctAnswer, task };
   };
   return playGame(gameData);
