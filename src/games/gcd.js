@@ -1,4 +1,5 @@
 import playGame from '..';
+import getRandomNumber from '../utils';
 
 export default () => {
   const gameData = () => {
@@ -14,7 +15,7 @@ export default () => {
       };
       return num1 >= num2 ? findGCD(num1, num2, num2) : findGCD(num1, num2, num1);
     };
-    const [number1, number2] = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
+    const [number1, number2] = [getRandomNumber(100), getRandomNumber(100)];
     const question = `${number1} ${number2}`;
     const correctAnswer = gcd(number1, number2);
     const task = 'Find the greatest common divisor of given numbers.';

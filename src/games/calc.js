@@ -1,4 +1,5 @@
 import playGame from '..';
+import getRandomNumber from '../utils';
 
 export default () => {
   const gameData = () => {
@@ -7,8 +8,8 @@ export default () => {
       '+': (a, b) => a + b,
       '-': (a, b) => a - b,
     };
-    const [num1, num2] = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
-    const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
+    const [num1, num2] = [getRandomNumber(100), getRandomNumber(100)];
+    const actualOperation = ['*', '+', '-'][getRandomNumber(2)];
     const question = `${num1} ${actualOperation} ${num2}`;
     const correctAnswer = operations[actualOperation](num1, num2);
     const task = 'What is the result of the expression?';

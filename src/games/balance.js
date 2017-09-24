@@ -1,4 +1,5 @@
 import playGame from '..';
+import getRandomNumber from '../utils';
 
 export default () => {
   const gameData = () => {
@@ -15,7 +16,7 @@ export default () => {
       };
       return getBalance(arrOfDigits);
     };
-    const num = Math.round(Math.random() * 10000);
+    const num = getRandomNumber(10000);
     const question = `${num}`;
     const correctAnswer = balance(num);
     const task = 'Balance the given number.';
