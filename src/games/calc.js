@@ -11,7 +11,8 @@ export default () => {
     const actualOperation = ['*', '+', '-'][Math.round(Math.random() * 2)];
     const question = `${num1} ${actualOperation} ${num2}`;
     const correctAnswer = operations[actualOperation](num1, num2);
-    return { question, correctAnswer };
+    const task = 'What is the result of the expression?';
+    return { question, correctAnswer, task };
   };
   return playGame(gameData);
 };

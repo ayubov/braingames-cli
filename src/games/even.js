@@ -6,7 +6,8 @@ export default () => {
     const num = Math.round(Math.random() * 100);
     const question = `${num}`;
     const correctAnswer = isNumberEven(num);
-    return { question, correctAnswer };
+    const task = 'Answer "yes" if number even otherwise answer "no".';
+    return { question, correctAnswer, task };
   };
   return playGame(gameData);
 };

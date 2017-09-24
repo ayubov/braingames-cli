@@ -17,7 +17,8 @@ export default () => {
     const [number1, number2] = [Math.round(Math.random() * 100), Math.round(Math.random() * 100)];
     const question = `${number1} ${number2}`;
     const correctAnswer = gcd(number1, number2);
-    return { question, correctAnswer };
+    const task = 'Find the greatest common divisor of given numbers.';
+    return { question, correctAnswer, task };
   };
   return playGame(gameData);
 };

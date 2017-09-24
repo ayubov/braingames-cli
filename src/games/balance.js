@@ -18,7 +18,8 @@ export default () => {
     const num = Math.round(Math.random() * 10000);
     const question = `${num}`;
     const correctAnswer = balance(num);
-    return { question, correctAnswer };
+    const task = 'Balance the given number.';
+    return { question, correctAnswer, task };
   };
   return playGame(gameData);
 };
