@@ -20,7 +20,7 @@ export default () => {
     const num = getRandomNumber(10000);
     const question = `${num}`;
     const correctAnswer = String(balance(num));
-    return { question, correctAnswer, task };
+    return { question, correctAnswer };
   };
-  return playGame(gameData);
+  return playGame(gameData, task);
 };

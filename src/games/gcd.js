@@ -20,7 +20,7 @@ export default () => {
     const [number1, number2] = [getRandomNumber(100), getRandomNumber(100)];
     const question = `${number1} ${number2}`;
     const correctAnswer = String(gcd(number1, number2));
-    return { question, correctAnswer, task };
+    return { question, correctAnswer };
   };
-  return playGame(gameData);
+  return playGame(gameData, task);
 };

@@ -13,8 +13,8 @@ export default () => {
     const actualOperation = ['*', '+', '-'][getRandomNumber(2)];
     const question = `${num1} ${actualOperation} ${num2}`;
     const correctAnswer = String(operations[actualOperation](num1, num2));
-    return { question, correctAnswer, task };
+    return { question, correctAnswer };
   };
-  return playGame(gameData);
+  return playGame(gameData, task);
 };
 

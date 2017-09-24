@@ -8,8 +8,8 @@ export default () => {
     const num = getRandomNumber(100);
     const question = `${num}`;
     const correctAnswer = String(isNumberEven(num));
-    return { question, correctAnswer, task };
+    return { question, correctAnswer };
   };
-  return playGame(gameData);
+  return playGame(gameData, task);
 };
 
