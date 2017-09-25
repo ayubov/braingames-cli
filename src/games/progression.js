@@ -1,11 +1,14 @@
 import playGame from '..';
 import getRandomNumber from '../utils';
 
-const makeProgression = (current, step) => (current.length === 10 ?
+const totalLength = 10;
+const makeProgression = (current, step) => (current.length === totalLength ?
   current : makeProgression([...current, current.slice(-1)[0] + step], step));
+
 const hideElement = (arr, targetElement) => arr
   .reduce((acc, e, index) => (index !== targetElement ? acc.concat(e) : acc.concat('..')), [])
   .join(' ');
+
 const task = 'What number is missing in this progression?';
 
 export default () => {
