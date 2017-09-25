@@ -8,7 +8,7 @@ const isPrime = (num) => {
     }
     return number % divisor === 0 ? false : iter(number, divisor - 1);
   };
-  return iter(num, num - 1);
+  return iter(num, Math.floor(num / 2));
 };
 
 const task = 'Is number prime?';
