@@ -6,7 +6,7 @@ const isPrime = (num) => {
     return true;
   }
   const iter = (number, divisor) => {
-    if (divisor === Math.floor(num / 2)) {
+    if (divisor > num / 2) {
       return true;
     }
     return number % divisor === 0 ? false : iter(number, divisor + 1);
