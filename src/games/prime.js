@@ -2,6 +2,9 @@ import playGame from '..';
 import getRandomNumber from '../utils';
 
 const isPrime = (num) => {
+  if (num < 2) {
+    return true;
+  }
   const iter = (number, divisor) => {
     if (divisor === 1) {
       return true;
