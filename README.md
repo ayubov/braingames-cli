@@ -13,9 +13,9 @@ Uncomplicated cli games which  helpful to train our brain.
 
 
 #### <i class="icon-file"></i> Games list:
-**brain-even**
-**brain-calc**
-**brain-gcd**
-**brain-prime**
-**brain-balance**
-**brain-progression**
+brain-even
+brain-calc
+brain-gcd
+brain-prime
+brain-balance
+brain-progression
