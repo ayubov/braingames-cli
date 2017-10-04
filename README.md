@@ -8,14 +8,14 @@ Uncomplicated cli games which  helpful to train our brain.
 [![Build Status](https://travis-ci.org/ayubov/project-lvl1-s128.svg?branch=master)](https://travis-ci.org/ayubov/project-lvl1-s128)
 
 #### <i class="icon-file"></i> Usage
-**$ npm i -g braingames-cli**
-**$ brain-calc**
+# **$ npm i -g braingames-cli**
+# **$ brain-calc**
 
 
-#### <i class="icon-file"></i> Games list:
-brain-even
-brain-calc
-brain-gcd
-brain-prime
-brain-balance
-brain-progression
+#### <i class="ic   on-file"></i> Games list:
+# brain-even
+# brain-calc
+# brain-gcd
+# brain-prime
+# brain-balance
+# brain-progression
