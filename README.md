@@ -11,7 +11,7 @@ Uncomplicated cli games which  helpful to train our brain.
 
 [![NPM](https://nodei.co/npm/braingames-cli.png)](https://nodei.co/npm/braingames-cli/)
 
-#### <i class="icon-file"></i> Usage
+#### <i class="icon-file"></i> Usage:
 > $ npm i -g braingames-cli
 
 > $ brain-calc
